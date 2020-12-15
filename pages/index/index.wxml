@@ -1,0 +1,8 @@
+<view class="container">
+<image class='about-banner'src='/images/icons/钱袋.png'></image>
+<text style='font-weight: bold; font-size: 60rpx;'>精致生活从记账开始</text>
+<text>今天你记账了吗</text>
+<text style='font-size:30rpx;'>左滑删除哦</text>
+
+
+</view>

@@ -1,0 +1,21 @@
+<scroll-view scroll-x style="width: 100%" class="table">
+  <block wx:for="{{tables}}" wx:key="key" wx:for-item="table" wx:for-index="table_index">
+    <view class="tr gray" wx:if="{{table_index== 0||table_index== tables.length-1}}">
+      <view class="td" wx:for="{{table}}" wx:key="key" wx:item="item" data-id="{{table_index}}">{{item}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td" wx:for="{{table}}" wx:key="key" wx:item="item"  data-id="{{table_index}}">
+        <view wx:if="{{index==0||index==table.length-1}}">
+          {{item}}
+        </view>
+        <view wx:else>
+          <input class="newInput" bindblur="calSum" data-id="{{index}}" data-idd="{{table_index}}" value="{{item}}"></input>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+
+  
+    
+    

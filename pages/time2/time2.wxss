@@ -1,0 +1,33 @@
+.table {
+  border: 0px solid darkgray;
+  font-size: 12px;
+}
+ 
+.tr {
+  display: flex;
+  width: 2700rpx;
+  align-items: center;
+}
+ 
+.td {
+  width: 150rpx;
+  height: 2rem;
+  justify-content: center;
+  text-align: center;
+  flex: flex;
+  align-items: center;
+  word-wrap: break-word;
+  flex-shrink: 0;
+  line-height: 2rem;
+  border: 1rpx solid #fff000;
+}
+ 
+.gray {
+  background: #e6fe3f;
+}
+ 
+.newInput {
+  line-height: 2rem;
+  height: 2rem;
+  width: 100%;
+}

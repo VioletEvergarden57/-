@@ -1,0 +1,16 @@
+<template name="listTemplate">
+  <view class="outter">
+    <view class="list" catchtouchstart="onTouchStart"  catchtouchend="onTouchEnd" catchtouchmove="onTouchMove" style="right:{{item.slideX}}"  >
+      <view class="list-people ">{{item.inputPeople}}</view>
+      <view class="list-info ">{{item.inputInfo}}</view>
+      <view class="list-money-date ">
+        <view class="list-money colorRed"  wx:if="{{item.radioGroup=='-'?true:false}}">{{item.radioGroup+"￥ "+item.inputMoney}}</view>
+        <view class="list-money colorGreen" wx:else>{{item.radioGroup+"￥ "+item.inputMoney}}</view>
+        <view class="list-date ">{{"[ "+item.date+"] "}}</view>
+      </view>
+    </view>
+    <view class="delete">
+      <text class="delete-text ">删除</text>
+    </view>
+  </view>
+</template>

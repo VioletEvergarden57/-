@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/tm/tm",
+    "pages/time/time",
+    "pages/money/money",
+    "pages/task/task",
+    "pages/time2/time2"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "大学生活",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list":[{
+      "pagePath":"pages/tm/tm",
+      "text":"时间管理",
+      "iconPath":"icon/time1.png",
+      "selectedIconPath":"icon/time2.png"
+    },
+    {
+      "pagePath":"pages/money/money",
+      "text":"金钱管理",
+      "iconPath":"icon/money1.png",
+      "selectedIconPath":"icon/money2.png"
+    },
+    {
+      "pagePath":"pages/task/task",
+      "text":"任务管理",
+      "iconPath":"icon/task1.png",
+      "selectedIconPath":"icon/task2.png"
+    }
+  ],
+  "selectedColor":"0094ff"
+ 
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+  
+}

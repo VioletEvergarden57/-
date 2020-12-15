@@ -1,0 +1,42 @@
+<import src="list/list.wxml" />
+<view class="container">
+  <view class="total">
+    <view class="total-money">￥{{totalMoney}}</view>
+    <span class="total-word">总资产</span> 
+    <view class="total-list">
+      <view id="totalOut" class="total-out" catchtap="onDetailTap">
+        <view class="total-out-money">-￥{{outMoney}}</view>
+        <view class="total-out-number">支出{{outNumber}}笔</view>
+      </view>
+      <span class=" shuxian"></span> 
+      <view id="totalIn" class="total-in" catchtap="onDetailTap">
+        <view class="total-in-money">+￥{{inMoney}}</view>
+        <view class="total-in-number">收入{{inNumber}}笔</view>
+      </view>
+    </view>
+  </view>
+  <view class="add" catchtap="onEditTap">
+    <view class="image"></view>
+    记账</view>
+  <view class="show ">
+    <span wx:if="{{detailInfo}}">空空如也，快去记上一笔吧</span> 
+    <view class="list-container" wx:else>
+      <block wx:for="{{data}}" wx:for-item="item" wx:for-index="index">
+        <view class="outter">
+          <view class="list" catchtouchstart="onTouchStart" catchtouchend="onTouchEnd" catchtouchmove="onTouchMove" style="right:{{item.slideX}}" data-listId="{{index}}">
+            <view class="list-people ">{{item.inputPeople}}</view>
+            <view class="list-info ">{{item.inputInfo}}</view>
+            <view class="list-money-date ">
+              <view class="list-money colorRed" wx:if="{{item.radioGroup=='-'?true:false}}">{{item.radioGroup+"￥ "+item.inputMoney}}</view>
+              <view class="list-money colorGreen" wx:else>{{item.radioGroup+"￥ "+item.inputMoney}}</view>
+              <view class="list-date ">{{"["+item.date+"]"}}</view>
+            </view>
+          </view>
+          <view class="delete" catchtap="onDeleteTap" data-deleteId="{{index}}">
+            <text class="delete-text ">删除</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

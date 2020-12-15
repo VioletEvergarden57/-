@@ -1,0 +1,24 @@
+<import src="../list/list.wxml" />
+<view class="container">
+  <view class="title title-out" wx:if="{{titleShow}}">支出列表</view>
+  <view class="title title-out" wx:else>收入列表</view>
+  <view><span wx:if="{{detailInfo}}" class="noList">暂无记录····</span> </view>
+  <view class="list-container">
+    <block wx:for="{{data}}" wx:for-item="item" wx:for-index="index">
+      <view class="outter">
+        <view class="list" catchtouchstart="onTouchStart" catchtouchend="onTouchEnd" catchtouchmove="onTouchMove" style="right:{{item.slideX}}" data-listId="{{index}}">
+          <view class="list-people ">{{item.inputPeople}}</view>
+          <view class="list-info ">{{item.inputInfo}}</view>
+          <view class="list-money-date ">
+            <view class="list-money colorRed" wx:if="{{item.radioGroup=='-'?true:false}}">{{item.radioGroup+"￥ "+item.inputMoney}}</view>
+            <view class="list-money colorGreen" wx:else>{{item.radioGroup+"￥ "+item.inputMoney}}</view>
+            <view class="list-date ">{{"["+item.date+"]"}}</view>
+          </view>
+        </view>
+        <view class="delete" catchtap="onDeleteTap">
+          <text class="delete-text ">删除</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+@import "../list/list.wxss";
+
+.title {
+  margin: 20rpx 0;
+  font-weight: bold;
+}
+
+.title-out {
+  color: #996666;
+}
+
+.title-in {
+  color: #CCCC99;
+}
+
+.list-container {
+  width: 100%;
+}
+
+.noList {
+  margin: 100rpx auto;
+  display: block;
+  color: #bbb;
+  font-size: 38rpx;
+}

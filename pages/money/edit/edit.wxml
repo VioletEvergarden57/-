@@ -1,0 +1,40 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <radio-group class="radio-group" name="radioGroup" bindchange="radioChange">
+      <label class="radio raido-active" wx:if="{{moneyOut}}">
+        <radio value="-" checked="{{true}}" />支出
+      </label>
+      <label class="radio raido-noactive" wx:else>
+        <radio value="-" />支出
+      </label>
+      <label class="radio raido-active" wx:if="{{moneyIN}}">
+        <radio value="+" checked="{{true}}" />收入
+      </label>
+      <label class="radio raido-noactive" wx:else>
+        <radio value="+" />收入
+      </label>
+    </radio-group>
+    <view class="input-view">
+      <view class="requireds" >{{requiredPeople}}</view>
+      <input name="inputPeople" bindconfirm="bindconfirmPeople" placeholder="类型" />
+    </view>
+    <view class="input-view">
+      <view class="requireds" >{{requiredMoney}}</view>
+      <input name="inputMoney" type="number" bindconfirm="bindconfirmMoney" placeholder="￥0.00" />
+    </view>
+    <view class="input-view">
+      <view class="requireds" >{{requiredInfo}}</view>
+      <input name="inputInfo" bindconfirm="bindconfirmInfo" placeholder="请填写备注，不要超过25个汉字" />
+    </view>
+    <view class="date-info">
+      <picker mode="date" value="{{date}}" value="2016-06-09" start="2000-01-01" bindchange="bindDateChange">
+        <view class="picker">
+          日期: {{date}}
+        </view>
+      </picker>
+    </view>
+    <view class="save">
+      <button formType="submit">保存</button>
+    </view>
+  </form>
+</view>

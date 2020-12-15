@@ -1,0 +1,8 @@
+<!--pages/tm/tm.wxml-->
+<button class="bt1" bindtap="tm1">
+
+课程表</button>
+
+<button class="bt2" bindtap="tm2">
+
+时间表</button>
